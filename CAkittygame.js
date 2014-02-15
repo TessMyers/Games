@@ -1,3 +1,5 @@
+// The prisoners dilemma, but with cats! Hosted at http://www.tessmyers.com/kitty.html (includes irritating and insistent prompts).
+
 var kittyGame =  function() {
   var userChoice = prompt("A wild kitty appears! Do you bite her?");
   var computerChoice = Math.random();
