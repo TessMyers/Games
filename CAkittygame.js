@@ -1,37 +1,28 @@
-<script>
-var userChoice = prompt("A wild kitty appears! Do you bite her?");
-var computerChoice = Math.random();
-if (computerChoice < 0.5) {
+var kittyGame =  function() {
+  var userChoice = prompt("A wild kitty appears! Do you bite her?");
+  var computerChoice = Math.random();
+  if (computerChoice < 0.5) {
     computerChoice = "yes";
-} else if(computerChoice > 0.5) {
+  } else if(computerChoice > 0.5) {
     computerChoice = "no";
-} 
+  }
+   if (userChoice != "yes" && userChoice != "no") {
+     alert("Conform to my binary demands! Yes or no.");
+     kittyGame();
+   }
 
-var compare = function(choice1, choice2) {
-    if (choice1 === choice2) {
-        alert("Stalemate!");
+if (userChoice === "yes") {
+    if (computerChoice === "yes") {
+      alert("Ahh! You've both bitten each other! Nobody wins :( ");
+    } else {
+      alert("You win! But you also have cat hair in your mouth");
     }
-    // tie
-    else if (choice1 === "yes") {
-        if (choice2 === "no") {
-            alert("You win! But you also have cat hair in your mouth");
-        }
-        else {
-            alert("Ahh! You've both bitten each other! Nobody wins :( ");
-        }}
-    // User bites
-
-    else if (choice1 === "no") {
-        if (choice2 === "yes") {
-            alert("The cat has gotten you! You are mortally wounded! Alas, your bedspread will never be the same again.");
-        }
-        else {
-            alert("peace is achieved. The kingdom is safe.");
-        }}
-    //User does not bite
-}
-        
-compare(userChoice, computerChoice)
-</script>
-
-//hosted on www.tessmyers.com/kitty
+  } else if (userChoice === "no") {
+    if (computerChoice === "yes") {
+      alert("The cat has gotten you! You are mortally wounded! Now she gets to pee outside the litterbox whenever she wants.");
+    } else {
+      alert("You have both opted for peacful action. Nirvana is achieved. The kingdom is safe.");
+    }
+  }
+};
+kittyGame();
