@@ -2,12 +2,7 @@
 
 var kittyGame =  function() {
   var userChoice = prompt("A wild kitty appears! Do you bite her?");
-  var computerChoice = Math.random();
-  if (computerChoice < 0.5) {
-    computerChoice = "yes";
-  } else if(computerChoice > 0.5) {
-    computerChoice = "no";
-  }
+  var computerChoice = (Math.random() >= 0.5) ? "yes" : "no";
    if (userChoice != "yes" && userChoice != "no") {
      alert("Conform to my binary demands! Yes or no.");
      kittyGame();
