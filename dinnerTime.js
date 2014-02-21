@@ -1,4 +1,4 @@
-//Works on website!
+//Works on website! www.tessmyers.com/dinnertime.html
 var makeDinner = function() {
   var user = prompt("We are going to go on the most exciting culinary adventure. What do you want to make for dinner? You can make STEAK, SALAD, or SOUP").toUpperCase();
 
