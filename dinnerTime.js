@@ -14,7 +14,7 @@ var makeDinner = function() {
   break;
 
   case 'SALAD':
-  var dressing = prompt("Mmm bunny food. How do you want to dress this salad? ITALIAN, RANCH, or MEAT SAUCE?").toUpperCase();
+  var dressing = prompt("Mmm BUNNY FOOD. How do you want to dress this salad? ITALIAN, RANCH, or MEAT SAUCE?").toUpperCase();
   if (dressing === 'ITALIAN' || dressing === 'RANCH') {
     console.log("You made the mistake of choosing ordinary salad dressing. Your punishment is to hear that joke about how the tomato blushed because it saw the salad dressing, but on loop forever. Enjoy. ");
   } else if (dressing === 'MEAT SAUCE') {
