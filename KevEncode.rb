@@ -1,20 +1,18 @@
 # encrypt it:
-def encode
-  new = []
+def encrypt
   puts "what would you like to encrypt?"
   text = gets.chomp
-  encrypt = text.split("").collect {|letter| new << (letter.sum + 5).chr}
-  puts new.join
+  encrypt = text.split("").collect {|letter| (letter.sum + 5).chr}
+  puts encrypt.join
 end
 
 
 # and now decrypt it!
-def decode
-  new = []
+def decrypt
   puts "what would you like to decrypt?"
   text = gets.chomp
-  encrypt = text.split("").collect {|letter| new << (letter.sum - 5).chr}
-  puts new.join
+  decrypt = text.split("").collect {|letter| (letter.sum - 5).chr}
+  puts decrypt.join
 end
 
 
